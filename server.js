@@ -6,6 +6,7 @@ const express = require('express')
 
   const indexRouter = require('./routes/index')
   const authorRouter = require('./routes/authors')
+  const bookRouter = require('./routes/books')
 
 
   app.set('view engine', 'ejs')
@@ -28,6 +29,7 @@ mongoose
   
   app.use('/', indexRouter)
   app.use('/authors', authorRouter)
+  app.use('/books', bookRouter)
 
   
   app.listen(process.env.PORT || 3000)
